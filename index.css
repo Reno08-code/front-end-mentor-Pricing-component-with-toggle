@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+:root {
+  --Linear-Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+
+  --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+  --light-Grayish-Blue: hsl(234, 14%, 74%);
+  --Grayish-Blue: hsl(233, 13%, 49%);
+  --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+  background-size: 20%, 25%;
+  background-repeat: no-repeat;
+  background-position: 100% 1%, bottom left;
+  background-color: var(--Very-Light-Grayish-Blue);
+}
+main {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+ 
+}
+.heading{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+
+ 
+}
+li {
+  list-style: none;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--Grayish-Blue);
+}
+.container section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 3rem;
+  border-radius: 5px;
+}
+.professional {
+  background-image: linear-gradient(
+    45deg,
+    hsl(237, 63%, 64%),
+    hsl(236, 72%, 79%)
+  );
+  margin-bottom: 1rem;
+}
+.container .basic,
+.master {
+  background-color: #fff;
+  margin: 2rem 0;
+  border-radius: 5px;
+}
+
+.toggle-switch {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+h1,
+h2,
+ul {
+  color: var(--Grayish-Blue);
+}
+h1 {
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+}
+h2 {
+  margin-top: 1rem;
+}
+
+main .price {
+  color: var(--light-Grayish-Blue);
+}
+
+.container p {
+  font-size: 4.5rem;
+  margin: 1rem 0;
+}
+
+
+.container button {
+  margin: 2rem 0;
+  padding: 0.6rem 1rem;
+  background-image: linear-gradient(
+    45deg,
+    hsl(237, 63%, 64%),
+    hsl(236, 72%, 79%)
+  );
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+}
+
+.container button:hover {
+  background: #fff;
+  color: hsl(236, 72%, 79%);
+  border: 1px solid hsl(236, 72%, 79%);
+}
+
+section.professional p~ul,
+h2{
+color: white;
+}
+section.professional p{
+  color: white;
+}
+section.professional h2{
+  color: white;
+}
+section.professional button{
+  color:hsl(236, 72%, 79%);
+ 
+}
+.price{
+  padding-top:10px;
+}
+
+/* toggle bar w3 school example*/
+
+
+
+.toggle { 
+  position: relative;
+ display: inline-block;
+ width: 60px;
+ height: 35px;
+
+} /*this is the outer circle block size*/
+
+
+.toggle input{
+  opacity:0;
+  width: 0;
+  height: 0;
+} /*hide the default HTML checkbox*/
+
+
+.slider{
+  position: absolute;
+  cursor: pointer;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+ background-image: linear-gradient(
+    45deg,
+    hsl(237, 63%, 64%),
+    hsl(236, 72%, 79%)
+  );
+ transition: .4s;
+} 
+/* this is the span element*/
+
+.slider:before{
+  border-radius: 50%;
+  position: absolute;
+  content:"";
+  height: 26px;
+  width: 26px;
+  left:4px;
+  bottom:4px;
+  background-color: white;
+  transition: 0.4s;
+} /* the white circle */
+
+
+input:checked + .slider:before {
+  
+  transform: translateX(26px);
+}
+
+
+/* this is the inner circle*/
+input::after{
+content:'';
+position: absolute;
+top:50%;
+left:30%;
+transform: translate(-50%,-50%);
+border-radius: 50%;
+height: 1.25rem ;
+width: 1.23rem;
+background-color: black;
+transition: left 0.3s;
+}
+
+
+@media screen and (max-width:765px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:0 1rem;
+  }
+ 
+}
